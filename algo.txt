@@ -1,0 +1,133 @@
+probleme1:
+function findSumOfDistinctElements(set1, set2) {
+  var sum = 0;
+  var som1 = 0;
+  var som2 = 0;
+  var som3 = 0;
+
+  for (var i = 0; i < set1.length; i++) {
+    som1 += set1[i];
+  }
+
+  for (var j = 0; j < set2.length; j++) {
+    som2 += set2[j];
+  }
+
+  for (var k = 0; k < set1.length; k++) {
+    for (var g = 0; g < set2.length; g++) {
+      if (set1[k] === set2[g]) {
+        som3 += set1[k] + set2[g];
+      }
+    }
+  }
+
+  sum = (som1 + som2) - som3;
+  return sum;
+}
+
+const set1 = [3, 1, 7, 9];
+const set2 = [2, 4, 1, 9, 3];
+const result = findSumOfDistinctElements(set1, set2);
+console.log(result);
+
+Probleme2:
+1:
+
+Procedure dot_product(v1, v2):
+VAR
+    ps : integer 
+BEGIN 
+    IF v1.length - 1 is not equal to v2.length - 1:
+        write( "Vectors must have the same length.")
+    END_IF
+    Initialize ps to 0
+    
+   FOR i FROM 0 TO v1.length - 1 DO:
+        ps = ps + (v1[i] * v2[i])
+    END_FOR
+    Return ps
+END
+2:
+ALGORITHM check_orthhogonal  
+VAR
+n,i,ps : INTEGER 
+BENIG
+n= vectors.length
+FOR i FROM 0 TO n STEP 1 DO
+v1=vectors[i][0]
+v2=vectors[i][1]
+END_FOR
+ps= dot_product(v1, v2)
+IF (ps=0) THEN
+write("The vectors are orthogonal.")
+ELSE
+write("The vectors are not orthogonal.")
+
+END_IF
+
+
+END
+
+ 
+ 
+3:
+ALGORITHM check_orthhogonal  
+VAR
+n,i,ps : INTEGER 
+BENIG
+n= vectors.length
+FOR i FROM 0 TO n STEP 1 DO
+v1=vectors[i][0]
+v2=vectors[i][1]
+END_FOR
+FUNCTION  dot_product(v1, v2):
+VAR
+    ps : integer 
+BEGIN 
+    IF v1.length - 1 is not equal to v2.length - 1:
+        write( "Vectors must have the same length.")
+    END_IF
+    Initialize ps to 0
+    
+   FOR i FROM 0 TO v1.length - 1 DO:
+        ps = ps + (v1[i] * v2[i])
+    END_FOR
+    Return ps
+END
+
+IF (ps=0) THEN
+write("The vectors are orthogonal.")
+ELSE
+write("The vectors are not orthogonal.")
+
+END_IF
+
+
+END
+function dot_product(v1, v2){
+var sum=0
+if (v1.length !== v2.length)
+{
+console.log("The vectors are not orthogonal.")
+}
+for(var i=0;i<v1.length;i++){
+sum=sum+(v1[i]+v2[i]
+}
+if(sum===0){
+return “The vectors are orthogonal.”
+}else{
+return “The vectors are not orthogonal.”
+}
+}
+
+
+
+
+
+
+
+
+ 
+ 
+
+
